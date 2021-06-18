@@ -1,7 +1,6 @@
 package com.liuzixuan.code.gc;
 
 import java.io.Serializable;
-import com.lang.StringTest;
 
 /**
  * @Description
@@ -21,7 +20,7 @@ public class ReferenceCountingGC implements Serializable {
      */
     private byte[] bigSize = new byte[2 * _1MB];
 
-    public static void main(StringTest[] args) {
+    public static void main(String[] args) {
         testGC();
     }
 
