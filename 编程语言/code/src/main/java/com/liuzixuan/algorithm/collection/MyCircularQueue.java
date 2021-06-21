@@ -36,9 +36,8 @@ class MyCircularQueue {
             head = 0;
         }
         int[][] a = new int[2][2];
-        Stack<Integer> s = new Stack<>();
-        s.empty()
-        Queue<Integer> queue = new LinkedList<>();
+        char[] b = new char[2];
+        String s = new String(b);
         tail = (tail + 1) % size;
         data[tail] = value;
         return true;
