@@ -1,0 +1,6 @@
+<template name="tpl_tip_panel_view">
+  <view class="tip_panel_view flex-col" style="height:{{height}};" hidden="{{is_hidden}}">
+     <image class="jump" src="../../images/img_404.jpg"></image>
+     <text>{{mes}}</text>
+  </view>
+</template>

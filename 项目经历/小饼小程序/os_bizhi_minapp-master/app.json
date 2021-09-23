@@ -1,0 +1,42 @@
+{
+  "entryPagePath": "pages/index/index",
+  "pages": [
+    "pages/index/index",
+    "pages/minapp_list/minapp_list",
+    "pages/image_view/image_view"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "高清壁纸推荐",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#000",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_on.png",
+        "text": "精选"
+      },
+      {
+        "pagePath": "pages/minapp_list/minapp_list",
+        "iconPath": "images/tab-my-on.png",
+        "selectedIconPath": "images/tab-my-active.png",
+        "text": "发现"
+      }
+    ]
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx90b2a9f7d889ae59"
+  ],
+  "networkTimeout": {
+    "request": 20000
+  },
+  "debug": false,
+  "sitemapLocation": "sitemap.json"
+}

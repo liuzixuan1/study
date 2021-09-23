@@ -1,0 +1,22 @@
+/**image_list.wxss**/
+/* 壁纸列表容器样式定义 */
+.image_view {
+  width: 100%;
+  display: flex;/* flex布局 */
+  background-color: #fff;
+  flex-direction: row;/* x轴方向为主轴 */
+  flex-wrap: wrap;/* 主轴方向超出换行显示 */
+}
+/* 壁纸图片容器样式 */
+.image_view navigator {
+  margin-left: 6rpx;
+  margin-bottom: 6rpx;
+  width: 32.2%;/* 壁纸列表项显示宽度，相当于父容器的1/3 */
+  height: 360rpx;
+}
+/* 壁纸图片样式 */
+.image_view image {
+  width: 100%;
+  height: 100%;
+  border-radius: 6rpx;
+}

@@ -1,0 +1,28 @@
+<!-- “添加小程序”的动画提示 -->
+<view hidden='{{isWebChatTipsHidden}}' class='wx_tip'>
+  <image src="/images/tip_ios.svg"></image>
+</view>
+<!-- 图片轮播图 -->
+<swiper class='banner_swiper' indicator-dots="{{indicatorDots}}" indicator-active-color="#fff" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <!-- 遍历轮播图列表 -->
+  <block wx:for="{{banner_list}}" wx:for-item="item" wx:key="id">
+    <swiper-item>
+      <image bindtap='ev_banner' data-index="{{index}}" src="{{item.image}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+<!-- 分类导航栏 -->
+<scroll-view scroll-x="{{true}}" class="menubar {{cat_is_fixed?'fixed':''}}">
+  <view class="menu">
+    <!-- 遍历壁纸分类列表 -->
+    <block wx:for="{{cate_list}}" wx:key="id">
+      <!-- 分类显示，如果分类id等于当前选中壁纸分类id，则显示选中状态（添加active样式） -->
+      <text class="{{item.id==curr_cate_id?'active':''}}" bindtap="ev_cat_search" data-id="{{item.id}}">{{item.name}}</text>
+    </block>
+  </view>
+</scroll-view>
+<!-- 壁纸图片列表 -->
+<view class="main_view">
+  <!-- 引入图片列表模版文件 -->
+  <include src="../common/image_list.wxml" />
+</view>

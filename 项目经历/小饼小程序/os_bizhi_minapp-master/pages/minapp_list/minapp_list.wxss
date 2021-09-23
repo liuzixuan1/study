@@ -1,0 +1,36 @@
+/* pages/minapp_list/minapp_list.wxss */
+
+.list_item {
+  padding: 0px 30rpx;
+}
+
+.list_item>image {
+  width: 108rpx;
+  height: 108rpx;
+  margin-right: 24rpx;
+  border-radius: 100%;
+}
+
+.list_item .right_view {
+  padding: 4rpx 0px 20rpx;
+  border-bottom: 1rpx solid #ededed;
+  flex: 1;
+  justify-content: space-between;
+}
+
+.list_item .right_view text {
+  font-size: 34rpx;
+  color: #000;
+  margin-bottom: 12rpx;
+}
+
+.list_item .right_view view {
+  font-size: 28rpx;
+  color: #a2a2a2;
+  height: 16px;
+  overflow: hidden;
+}
+
+view.tip_panel_view {
+  margin-top: 300rpx;
+}

@@ -1,0 +1,18 @@
+<!--pages/minapp_list/minapp_list.wxml-->
+<import src="../common/tpl_tip_panel_view.wxml" />
+<view class="pageContainer">
+  <view class='view_main flex-col' style="margin-top: 20rpx;">
+    <block wx:if="{{!is_no_data}}">
+      <block wx:for="{{data_list}}" wx:for-item="item" wx:key="id">
+        <navigator bindsuccess='ev_open_minapp_suc' bindfail='ev_open_minapp_fail' target="miniProgram" open-type="navigate" data-id='{{item.id}}' app-id="{{item.appid}}" class='list_item flex flex-jsb flex-acenter'>
+          <image src='{{item.image}}'></image>
+          <view class='right_view flex-col flex-jsb'>
+            <text>{{item.name}}</text>
+            <view>{{item.remark}}</view>
+          </view>
+        </navigator>
+      </block>
+    </block>
+    <template is="tpl_tip_panel_view" data="{{...tip_panel_data}}" />
+  </view>
+</view>

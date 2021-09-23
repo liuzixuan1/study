@@ -1,0 +1,242 @@
+/* pages/image_view/image_view.wxss */
+/* 导入字体图标样式 */
+@import "/lib/icon/iconfont.wxss";
+
+/* 主体信息展示区域样式 */
+.main_view {
+  position: relative;
+  /* 相对定位 */
+}
+
+/* 主体信息展示区域、swiper和壁纸图片样式 */
+.main_view,
+swiper,
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 壁纸图片毛玻璃效果 */
+.slide-image.img_filter {
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+  -moz-filter: blur(10px);
+  -ms-filter: blur(10px);
+  -o-filter: blur(10px);
+}
+
+/* 滑块项样式 */
+swiper-item {
+  position: relative;
+  /* 相对定位 */
+}
+
+/* 壁纸解锁按钮样式 */
+swiper-item>button {
+  z-index: 2;
+  position: absolute;
+  /* 绝对定位 */
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  /* 背景透明 */
+  display: flex;
+  /* flex布局 */
+  justify-content: center;
+  /* 主轴方向居中对齐 */
+  align-items: center;
+  /* 交叉轴方向居中对齐 */
+  top: 0px;
+  /* 距离顶部位置 */
+  left: 0px;
+  /* 距离左侧位置 */
+  border: 0px;
+  /* 无边框 */
+}
+
+/* 按钮伪样式 */
+button::after {
+  border: 0px;
+  /* 去除边框 */
+}
+
+/* 壁纸解锁按钮内图片样式 */
+swiper-item>button image {
+  width: 80rpx;
+  height: 80rpx;
+}
+
+/* 顶部数字显示样式 */
+.num_show {
+  position: absolute;
+  /* 绝对定位 */
+  left: 35%;
+  /* 距离左侧位置 */
+  width: 30%;
+  text-align: center;
+  /* 文本居中显示 */
+  color: #fff;
+  font-size: 28rpx;
+  z-index: 1;
+}
+
+/* 顶部返回图片按钮样式 */
+.back {
+  position: fixed;
+  /* 固定、停靠定位 */
+  left: 20rpx;
+  /* 距离左侧位置 */
+  padding: 30rpx;
+  width: 60rpx;
+  height: 60rpx;
+  z-index: 2;
+}
+
+.info_view {
+  width: 710rpx;
+  margin-left: 20rpx;
+  padding: 10rpx 0px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 220rpx;
+}
+
+.info_view .title {
+  color: #000;
+  font-size: 30rpx;
+  line-height: 42rpx;
+  font-weight: 500;
+  padding: 0 10rpx;
+}
+
+/* 壁纸标签容器样式 */
+.info_view .cat {
+  display: flex;
+  /* flex布局 */
+  align-items: center;
+  /* 交叉轴即y轴方向，居中对齐 */
+  flex-flow: wrap;
+  /* 主轴即x轴方向，超出则换行显示 */
+  margin-top: 10rpx;
+  /* 上外间距 */
+}
+
+/* 壁纸标签项样式 */
+.info_view .cat>view {
+  border-width: 2rpx;
+  /* 边框宽度 */
+  border-style: solid;
+  /* 边框样式：实线 */
+  border-radius: 30rpx;
+  /* 边框弧度 */
+  padding: 4rpx 22rpx;
+  /* 内间距 */
+  font-size: 26rpx;
+  margin-bottom: 10rpx;
+  margin-left: 10rpx;
+}
+/* 底部功能菜单容器样式 */
+.action_view {
+  position: fixed;/* 固定、停靠定位 */
+  bottom: 0px;/* 距离底部位置 */
+  left: 0px;/* 距离左侧位置 */
+  width: 100%;
+  background-color: rgba(246, 246, 246, 0.7);/* 背景色及透明度 */
+  z-index: 100;
+  padding: 10rpx 0px;
+  display: flex;/* flex布局 */
+  align-items: center;/* 主轴方向居中对齐 */
+}
+/* 底部功能菜单字体图标样式 */
+.action_view .iconfont {
+  font-size: 50rpx;
+  color: #262626;
+}
+/* 底部功能菜单文本样式 */
+.action_view text {
+  font-size: 26rpx;
+  color: #575757;
+}
+/* 底部功能菜单项容器样式 */
+.action_view>view,
+.action_view>button{
+  /* flex布局 */
+  display: flex;
+  /* y轴方向为主轴 */
+  flex-direction: column;
+  /* 交叉轴即x轴方向居中对齐 */
+  align-items: center;
+  margin: 0 20rpx;
+  /* 占据父容器的份数，假设子项数为n，则子项的宽度即为1/n;这里即每个菜单宽度为父容器的1/4，即25% */
+  flex: 1;
+  /* 主轴即y轴方向两端对齐 */
+  justify-content: space-between;
+  height: 90rpx;
+}
+/* 底部功能菜单button样式 */
+.action_view>button {
+  background-color: transparent;/* 背景色透明 */
+  border: 0px;
+  padding: 0px;
+  line-height: 1.1;/* 行高 */
+}
+
+/* 壁纸标签颜色样式定义begin */
+.c_blue {
+  border-color: #7ec6fe;
+  color: #7ec6fe;
+}
+
+.c_orange {
+  border-color: #fca02e;
+  color: #fca02e;
+}
+
+.c_red {
+  border-color: #f93613;
+  color: #f93613;
+}
+
+.c_violet {
+  border-color: #7c2399;
+  color: #7c2399;
+}
+
+.c_green {
+  border-color: #3db024;
+  color: #3db024;
+}
+
+.c_yellow {
+  border-color: #f8ed08;
+  color: #f8ed08;
+}
+
+.c_pink {
+  border-color: #df16ae;
+  color: #df16ae;
+}
+
+.c_deepred {
+  border-color: #7b1f1f;
+  color: #7b1f1f;
+}
+
+/* 壁纸标签颜色样式定义end */
+
+.notice_btn {
+  width: 70%;
+  border: 2rpx solid rgb(175, 175, 175);
+  margin: 10rpx 0px;
+  align-self: center;
+  line-height: 2.8;
+  font-size: 26rpx;
+  color: #000;
+}
+
+.notice_tip {
+  color: rgb(175, 175, 175);
+  margin-bottom: 10rpx;
+  font-size: 24rpx;
+  text-align: center;
+}

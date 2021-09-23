@@ -1,0 +1,11 @@
+<!--壁纸列表展示模版-->
+<view class='image_view'>
+  <!-- 遍历壁纸列表数据 -->
+  <block wx:for="{{list}}" wx:key="id">
+    <navigator url="/pages/image_view/image_view?id={{item.id}}">
+      <image webp="true" lazy-load="true" data-index='{{index}}' src="{{item.cover_image}}"></image>
+    </navigator>
+  </block>
+</view>
+<!-- 列表加载提示，如果页面处于加载中，则显示，否则隐藏 -->
+<view class="tipview" hidden="{{!loading}}">{{tip_message}}</view>

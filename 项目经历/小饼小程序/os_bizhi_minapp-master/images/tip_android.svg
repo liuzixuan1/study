@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="234px" height="131px" viewBox="0 0 234 131" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Group 10</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M188.725785,19.7763734 L196.251528,2.57467496 C196.915626,1.05673579 198.684517,0.364561071 200.202457,1.02865946 C200.893922,1.33117579 201.445956,1.88320905 201.748472,2.57467496 L209.274215,19.7763734 L216,19.7763734 C221.522847,19.7763734 226,24.2535259 226,29.7763734 L226,113.776373 C226,119.299221 221.522847,123.776373 216,123.776373 L10,123.776373 C4.4771525,123.776373 6.76353751e-16,119.299221 0,113.776373 L0,29.7763734 C-6.76353751e-16,24.2535259 4.4771525,19.7763734 10,19.7763734 L188.725785,19.7763734 Z" id="path-1"/>
+        <filter x="-3.1%" y="-4.1%" width="106.2%" height="111.4%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.497678895 0" type="matrix" in="shadowBlurOuter1"/>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="精选首页" transform="translate(-412.000000, -119.000000)">
+            <g id="Group-10" transform="translate(416.000000, 120.000000)">
+                <g id="Combined-Shape">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"/>
+                    <use fill-opacity="0.55001639" fill="#000000" fill-rule="evenodd" xlink:href="#path-1"/>
+                </g>
+                <text id="“添加到桌面”-找壁纸更快捷" font-family="PingFangSC-Semibold, PingFang SC" font-size="28" font-weight="500">
+                    <tspan x="26.308" y="62" fill="#FAE740">“添加到桌面”</tspan>
+                    <tspan x="200.692" y="62" fill="#FFFFFF"> </tspan>
+                    <tspan x="29.5" y="102" font-family="PingFangSC-Regular, PingFang SC" font-weight="normal" fill="#FFFFFF">找壁纸更快捷</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

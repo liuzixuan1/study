@@ -1,0 +1,75 @@
+<!--pages/image_view/image_view.wxml-->
+<!-- 主体信息展示区域 -->
+<view class='main_view'>
+  <!-- 自定义导航栏begin -->
+  <!-- 返回图片按钮 -->
+  <image bindtap="ev_back" class="back" style="top:{{statusBarHeight}}rpx" src="/images/back.png"></image>
+  <!-- 当前壁纸套图：正在第几张图片/图片总数 -->
+  <text class="num_show" style="top:{{statusBarHeight+20}}rpx">{{current+1}}/{{image_info.images.length}}</text>
+  <!-- 自定义导航栏end -->
+  <!-- 壁纸套图展示容器 -->
+  <swiper indicator-dots="{{false}}" bindchange='ev_swiper_change' current="{{current}}" autoplay="{{false}}"
+    interval="5000" duration="1000" circular="true">
+    <block wx:for="{{image_info.images}}" wx:key="org">
+      <swiper-item>
+        <!-- (默认)前两张壁纸 和 已解锁的壁纸，都可正常浏览 -->
+        <image webp="true" lazy-load="true" wx:if='{{index<2 || unlock_info.view}}' src="{{item.thumb}}"
+          class="slide-image" />
+        <block wx:else>
+          <!-- 未解锁的壁纸毛玻璃效果展示，并居中显示“解锁”按钮 -->
+          <image src="{{item.thumb}}" class="slide-image img_filter" />
+          <button bindtap="ev_unlock" hidden='{{unlock_info.view}}'>
+            <image src="/images/unlock.png"></image>
+          </button>
+        </block>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+
+<!-- 壁纸信息展示 -->
+<view class="info_view">
+  <text class="title">{{image_info.title}}</text>
+  <!-- 壁纸标签 -->
+  <view class="cat">
+    <!-- 遍历标签数组，显示标签 -->
+    <block wx:for="{{image_info.tags}}" wx:key="id">
+      <!-- 以遍历项索引从壁纸标签颜色样式数组中获取样式，获取不到，则显示默认样式：c_blue -->
+      <view class="{{colors[index]?colors[index]:'c_blue'}}">{{item.name}}</view>
+    </block>
+  </view>
+  <button class="notice_btn" bindtap="ev_open_notice">开启新壁纸提醒</button>
+  <text class="notice_tip">开启后可及时收到新壁纸提醒（提醒时间：9：00）</text>
+</view>
+
+<!-- 底部功能菜单 -->
+<view class="action_view">
+  <!-- 如果当前列表索引为0，则显示“首页”菜单，否则，显示“上一组”菜单 -->
+  <view wx:if="{{list_index==0}}" bindtap="to_index">
+    <view class="iconfont icon-shouye"></view>
+    <text>首页</text>
+  </view>
+  <view wx:else bindtap="ev_last">
+    <view class="iconfont icon-shangyiye"></view>
+    <text>上一组</text>
+  </view>
+  <view bindtap="ev_download">
+    <view class="iconfont icon-download"></view>
+    <text>下载</text>
+  </view>
+  <view bindtap="ev_poster">
+    <view class="iconfont icon-image"></view>
+    <text>海报</text>
+  </view>
+  <button open-type="share">
+    <view class="iconfont icon-fenxiang"></view>
+    <text>分享</text>
+  </button>
+  <!-- 如果当前列表数量大于1，并且当前不为最后一组，则显示“下一组”菜单 -->
+  <view bindtap="ev_next" wx:if="{{list_count>1 && (list_index+1)<list_count}}">
+    <view class="iconfont icon-xiayiye"></view>
+    <text>下一组</text>
+  </view>
+</view>
+<!-- 引入“用户微信授权登录弹框”模版 -->
+<include src="../common/tpl_user_wxlogin_view.wxml" />
