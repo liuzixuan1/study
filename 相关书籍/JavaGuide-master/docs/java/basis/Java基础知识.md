@@ -1231,7 +1231,7 @@ JAVA 反射机制是在运行状态中，对于任意一个类，都能够知道
 
 - **try 块：** 用于捕获异常。其后可接零个或多个 catch 块，如果没有 catch 块，则必须跟一个 finally 块。
 - **catch 块：** 用于处理 try 捕获到的异常。
-- **finally 块：** 无论是否捕获或处理异常，finally 块里的语句都会被执行。当在 try 块或 catch 块中遇到 return 语句时，finally 语句块将在方法返回之前被执行。
+- **finally 块：** 无论是否捕获或处理异常，finally 块里的语句都会被执行。当在 try 块或 catch 块中遇到 return 语句时，**finally 语句块将在方法返回之前被执行**。
 
 **在以下 4 种特殊情况下，finally 块不会被执行：**
 
